@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/initilzation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="initilzation"
+        android:padding="10dp"
+        android:text="int i=0"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/initilzation"
+        android:layout_margin="10dp"
+        android:hint="Condition"
+        android:padding="10dp"
+        android:text="i"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/condition"
+        android:layout_margin="10dp"
+        android:hint="Update"
+        android:padding="10dp"
+        android:text="i++"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

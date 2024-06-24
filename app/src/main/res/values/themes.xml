@@ -1,0 +1,9 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CodeBuilder" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/prime2</item>
+    </style>
+
+    <style name="Theme.CodeBuilder" parent="Base.Theme.CodeBuilder" />
+</resources>

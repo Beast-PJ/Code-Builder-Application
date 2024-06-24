@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "413889986648",
+    "project_id": "code-builder-f8e1b",
+    "storage_bucket": "code-builder-f8e1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413889986648:android:c88a39f7bde7e321a8ca2d",
+        "android_client_info": {
+          "package_name": "com.example.codebuilder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGaqjxFZioQgL7N2v30NsYOAdMtVxD2UY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

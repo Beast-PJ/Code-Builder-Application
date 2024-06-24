@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
+    android:padding="16dp"
+    tools:context=".Program_details">
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add new Program"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/algo_btn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toEndOf="@+id/page_title"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_done_24" />
+
+        <ImageButton
+            android:id="@+id/save_prog_btn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/algo_btn"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_done_24" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/code_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlebar"
+        android:layout_marginVertical="26dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    <EditText
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:hint="Filename.c"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/content_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:editable="false"
+            android:gravity="top"
+            android:hint="Description (Optional)"
+            android:maxLines="14"
+            android:minLines="14"
+            android:padding="12dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/toolbar_slide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/code_page">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/code_page"
+        android:layout_marginVertical="1dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:scrollbars="horizontal"
+        >
+        <Button
+            android:id="@+id/tinclude"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_corner"
+            android:paddingHorizontal="0dp"
+            android:text="INCLUDE"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/tif"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_corner"
+            android:paddingHorizontal="0dp"
+            android:text="IF"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/telse"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_corner"
+            android:paddingHorizontal="0dp"
+            android:text="ELSE"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/tfor"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_corner"
+            android:paddingHorizontal="0dp"
+            android:text="FOR"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/twhile"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_corner"
+            android:paddingHorizontal="0dp"
+            android:text="WHILE"
+            android:textStyle="bold"/>
+
+
+        <Button
+            android:id="@+id/tdowhile"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_corner"
+            android:paddingHorizontal="0dp"
+            android:text="DO WHILE"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    </HorizontalScrollView>
+    <HorizontalScrollView
+        android:id="@+id/toolbar_slide2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_slide"
+        android:layout_marginTop="10sp">
+
+        <LinearLayout
+            android:id="@+id/toolbar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar1"
+            android:layout_marginVertical="1dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/white"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:scrollbars="horizontal"
+            >
+            <Button
+                android:id="@+id/decrale_varible"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="0dp"
+                android:text="VARIBLES"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/tprintf"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="0dp"
+                android:text="PRINTF"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/tscanf"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="0dp"
+                android:text="SCANF"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/increment_decrement"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="0dp"
+                android:text="+/-"
+                android:textStyle="bold"/>
+
+
+            <Button
+                android:id="@+id/tswitch"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="0dp"
+                android:text="SWITCH"
+                android:textStyle="bold"/>
+
+
+            <Button
+                android:id="@+id/tcase"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_corner"
+                android:paddingHorizontal="0dp"
+                android:text="CASE"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        </HorizontalScrollView>
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_slide2"
+        android:layout_marginTop="10sp">
+    <LinearLayout
+        android:id="@+id/toolbar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar2"
+        android:layout_marginVertical="1dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:scrollbars="horizontal"
+        >
+    <Button
+        android:id="@+id/tmain"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_corner"
+        android:paddingHorizontal="0dp"
+        android:text="MAIN"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/tcls"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_corner"
+        android:paddingHorizontal="0dp"
+        android:text="CLS"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/truturn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_corner"
+        android:paddingHorizontal="0dp"
+        android:text="RETURN"
+        android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/texp"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_corner"
+            android:paddingHorizontal="0dp"
+            android:text="EXP"
+            android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/tbreak"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_corner"
+        android:paddingHorizontal="0dp"
+        android:text="BREAK"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/tcurlybraket"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_corner"
+        android:paddingHorizontal="0dp"
+        android:text="}"
+        android:textStyle="bold"/>
+
+    </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

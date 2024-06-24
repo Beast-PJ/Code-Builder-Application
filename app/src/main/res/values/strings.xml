@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Code Builder</string>
+    <string-array name="datatypes">
+        <item>int</item>
+        <item>float</item>
+        <item>double</item>
+        <item>char</item>
+        <item>string</item>
+    </string-array>
+    <string-array name="function_type">
+        <item>void</item>
+        <item>int</item>
+        <item>float</item>
+        <item>double</item>
+        <item>char</item>
+        <item>string</item>
+    </string-array>
+    <string-array name="oprators">
+        <item>+</item>
+        <item>-</item>
+        <item>*</item>
+        <item>/</item>
+        <item>%</item>
+    </string-array>
+</resources>

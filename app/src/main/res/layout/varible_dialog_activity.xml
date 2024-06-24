@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/datatype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Datatypes"
+        android:padding="10dp"
+        android:textStyle="bold">
+
+    </Spinner>
+
+    <EditText
+        android:id="@+id/varible_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/datatype"
+        android:hint="varible names"
+        android:padding="10dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/varible_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/varible_names"
+        android:layout_marginBottom="10dp"
+        android:hint="varible value (optional)"
+        android:padding="10dp"
+        android:textStyle="bold" />
+
+    <ToggleButton
+        android:id="@+id/access_specifer"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/varible_value"
+        android:textOff="public"
+        android:textOn="private" />
+
+    <ToggleButton
+        android:id="@+id/array_toggle"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/access_specifer"
+        android:textOff="Single"
+        android:textOn="Array"/>
+
+        <ToggleButton
+            android:id="@+id/static_status"
+            android:layout_width="220sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/varible_value"
+
+            android:layout_marginStart="10sp"
+            android:layout_toRightOf="@+id/access_specifer"
+            android:textOff="Non Static"
+            android:textOn="Static"/>
+
+    <ToggleButton
+        android:id="@+id/Constant"
+        android:layout_width="220sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/static_status"
+        android:layout_marginStart="10sp"
+        android:layout_toRightOf="@id/array_toggle"
+        android:textOff="Non Constant"
+        android:textOn="Constant"/>
+
+</RelativeLayout>

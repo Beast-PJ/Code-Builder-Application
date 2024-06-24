@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <CheckBox
+        android:id="@+id/stdio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="stdio.h"
+        android:textStyle="bold"/>
+
+    <CheckBox
+        android:id="@+id/conio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stdio"
+        android:padding="10dp"
+        android:text="conio.h"
+        android:textStyle="bold"/>
+
+    <CheckBox
+        android:id="@+id/stdlib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conio"
+        android:padding="10dp"
+        android:text="stdlib.h"
+        android:textStyle="bold"/>
+
+    <CheckBox
+        android:id="@+id/math"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stdlib"
+        android:padding="10dp"
+        android:text="math.h"
+        android:textStyle="bold"/>
+
+    <CheckBox
+        android:id="@+id/string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/math"
+        android:padding="10dp"
+        android:text="string.h"
+        android:textStyle="bold"/>
+
+    <CheckBox
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/string"
+        android:padding="10dp"
+        android:text="time.h"
+        android:textStyle="bold"/>
+    <CheckBox
+        android:id="@+id/limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:padding="10dp"
+        android:text="limit.h"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
