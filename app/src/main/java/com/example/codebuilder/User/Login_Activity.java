@@ -1,4 +1,4 @@
-package com.example.codebuilder;
+package com.example.codebuilder.User;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -17,6 +17,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.example.codebuilder.MainActivity;
+import com.example.codebuilder.R;
+import com.example.codebuilder.Utility;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

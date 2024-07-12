@@ -1,4 +1,4 @@
-package com.example.codebuilder;
+package com.example.codebuilder.Dialog;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -8,15 +8,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class Incre_Decre_Dialog_Activity extends AppCompatDialogFragment {
-    ToggleButton status;
-    private EditText name,value;
+import com.example.codebuilder.R;
+
+public class Con_Dialog extends AppCompatDialogFragment {
+    private EditText cond;
     private ExampleDialogListener listener;
     @SuppressLint("MissingInflatedId")
     @NonNull
@@ -24,26 +24,22 @@ public class Incre_Decre_Dialog_Activity extends AppCompatDialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.incre_decre_dialog_activity ,null);
+        View view = inflater.inflate(R.layout.eif_dialog,null);
 
         builder.setView(view)
-                .setTitle("Increment/Decrement Statement")
+                .setTitle("condition Statement")
                 .setNegativeButton("Cancel", (dialogInterface, i) -> {
 
                 })
                 .setPositiveButton("Insert", (dialogInterface, i) -> {
-                    String name1 = name.getText().toString();
-                    if (name1.isEmpty()){
-                        name.setError("Varible name can't be empty");
+                    String conditi = cond.getText().toString();
+                    if (conditi.isEmpty()){
+                        cond.setError("Condition can't be empty");
                         return;
                     }
-                    String value1 = value.getText().toString();
-                    String staus1 = status.getText().toString();
-                    listener.applyincdec(name1,staus1,value1);
+                    listener.applycondition(conditi);
                 });
-        name = view.findViewById(R.id.varible_names);
-        value = view.findViewById(R.id.value);
-        status = view.findViewById(R.id.increment_decrement);
+        cond = view.findViewById(R.id.condition);
         return builder.create();
 
     }
@@ -59,7 +55,6 @@ public class Incre_Decre_Dialog_Activity extends AppCompatDialogFragment {
     }
 
     public interface ExampleDialogListener{
-        void applyincdec(String name1,String status1, String value1);
+        void applycondition(String condition);
     }
 }
-

@@ -17,6 +17,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.codebuilder.Dialog.Con_Dialog;
+import com.example.codebuilder.Dialog.Exp_dialog_activity;
+import com.example.codebuilder.Dialog.Include_dialog;
+import com.example.codebuilder.Dialog.Incre_Decre_Dialog_Activity;
+import com.example.codebuilder.Dialog.Loop_dialog;
+import com.example.codebuilder.Dialog.Main_Dialog_activity;
+import com.example.codebuilder.Dialog.Statement_Dialog;
+import com.example.codebuilder.Dialog.Variable_dialog;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -24,7 +33,7 @@ import java.util.Date;
 import java.util.Locale;
 
 
-public class Program_details extends AppCompatActivity implements Con_Dialog.ExampleDialogListener,Loop_dialog.ExampleDialogListener,Include_dialog.ExampleDialogListener,Variable_dialog.ExampleDialogListener,Statement_Dialog.ExampleDialogListener,Incre_Decre_Dialog_Activity.ExampleDialogListener,Main_Dialog_activity.ExampleDialogListener,Exp_dialog_activity.ExampleDialogListener {
+public class Program_details extends AppCompatActivity implements Con_Dialog.ExampleDialogListener, Loop_dialog.ExampleDialogListener, Include_dialog.ExampleDialogListener, Variable_dialog.ExampleDialogListener, Statement_Dialog.ExampleDialogListener, Incre_Decre_Dialog_Activity.ExampleDialogListener, Main_Dialog_activity.ExampleDialogListener, Exp_dialog_activity.ExampleDialogListener {
 
     public static final String EXTRA_ID = "com.example.codebuilder.EXTRA_ID";
     public static final String EXTRA_TITLE = "com.example..EXTRA_TITLE";

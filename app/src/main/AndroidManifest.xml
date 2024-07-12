@@ -21,16 +21,13 @@
         android:theme="@style/Theme.CodeBuilder"
         tools:targetApi="34">
         <activity
-            android:name=".Exp_dialog_activity"
+            android:name=".Dialog.Exp_dialog_activity"
             android:exported="false" />
         <activity
-            android:name=".Main_Dialog_activity"
+            android:name=".Dialog.Main_Dialog_activity"
             android:exported="false" />
         <activity
             android:name=".activity_flowchart"
-            android:exported="false" />
-        <activity
-            android:name=".for_loop_activity"
             android:exported="false" />
         <activity
             android:name=".Algorithm_activity"
@@ -42,10 +39,10 @@
             android:name=".Program_details"
             android:exported="false" />
         <activity
-            android:name=".Login_Activity"
+            android:name=".User.Login_Activity"
             android:exported="false" />
         <activity
-            android:name=".Create_account_activity"
+            android:name=".User.Create_account_activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

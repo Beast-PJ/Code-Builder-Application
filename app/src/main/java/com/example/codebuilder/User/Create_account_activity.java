@@ -1,4 +1,4 @@
-package com.example.codebuilder;
+package com.example.codebuilder.User;
 
 import android.os.Bundle;
 import android.util.Patterns;
@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.example.codebuilder.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

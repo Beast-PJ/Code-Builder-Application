@@ -1,4 +1,4 @@
-package com.example.codebuilder;
+package com.example.codebuilder.Dialog;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -16,51 +16,42 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class Variable_dialog extends AppCompatDialogFragment {
-    EditText vname,vvalue;
-    ToggleButton access_specifier,constant,static_status,Array_toggle;
+import com.example.codebuilder.R;
+
+public class Main_Dialog_activity extends AppCompatDialogFragment {
+    private static Main_Dialog_activity.ExampleDialogListener listener;
+    EditText vname;
+    ToggleButton access_specifier;
     Spinner spinner;
-    private ExampleDialogListener listener;
+
     @SuppressLint("MissingInflatedId")
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.varible_dialog_activity,null);
-        spinner = view.findViewById(R.id.datatype);
+        LayoutInflater inflater = requireActivity().getLayoutInflater();
+        View view = inflater.inflate(R.layout.activity_main_dialog,null);
+        spinner = view.findViewById(R.id.type);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-                getContext().getApplicationContext(),
-                R.array.datatypes,
+                requireContext().getApplicationContext(),
+                R.array.function_type,
                 android.R.layout.simple_spinner_item
         );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
         builder.setView(view)
-                .setTitle("Declaration Statement")
+                .setTitle("Main Method")
                 .setNegativeButton("Cancel", (dialogInterface, i) -> {
 
                 })
                 .setPositiveButton("Insert", (dialogInterface, i) -> {
-                    String name = vname.getText().toString();
-                    if(name.isEmpty()){
-                        vname.setError("variable name can't be Null");
-                        return;
-                    }
+
                     String type = spinner.getSelectedItem().toString();
-                    String value = vvalue.getText().toString();
-                    String Array_status = Array_toggle.getText().toString();
                     String Access = access_specifier.getText().toString();
-                    String Static = Array_toggle.getText().toString();
-                    String Const = Array_toggle.getText().toString();
-                    listener.applyVarible(type,name,value,Array_status,Access,Static,Const);
+                    listener.applymain_method(type,Access);
                 });
         vname = view.findViewById(R.id.varible_names);
-        vvalue = view.findViewById(R.id.varible_value);
-        Array_toggle = view.findViewById(R.id.array_toggle);
         access_specifier = view.findViewById(R.id.access_specifer);
-        constant = view.findViewById(R.id.Constant);
-        static_status = view.findViewById(R.id.static_status);
         return builder.create();
 
     }
@@ -69,14 +60,14 @@ public class Variable_dialog extends AppCompatDialogFragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         try {
-            listener =(ExampleDialogListener) context;
+            listener =(Main_Dialog_activity.ExampleDialogListener) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(context +"must implement ExampleDialogListener");
         }
     }
 
     public interface ExampleDialogListener{
-        void applyVarible(String type,String name,String value,String Array_status,String Access,String Static,String Const);
+        void applymain_method(java.lang.String type, java.lang.String access);
     }
 }
 

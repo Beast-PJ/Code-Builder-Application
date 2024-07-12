@@ -1,4 +1,4 @@
-package com.example.codebuilder;
+package com.example.codebuilder.Note;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

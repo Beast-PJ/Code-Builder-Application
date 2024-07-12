@@ -1,4 +1,4 @@
-    package com.example.codebuilder;
+    package com.example.codebuilder.Note;
 
     import android.view.LayoutInflater;
     import android.view.View;
@@ -10,6 +10,7 @@
     import androidx.recyclerview.widget.ListAdapter;
     import androidx.recyclerview.widget.RecyclerView;
 
+    import com.example.codebuilder.R;
     import com.google.android.material.card.MaterialCardView;
 
     public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {

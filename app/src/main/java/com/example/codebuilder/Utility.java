@@ -9,7 +9,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Utility {
-    static void showToast(Context context, String message){
+    public static void showToast(Context context, String message){
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
     static CollectionReference getCollectionRefernceForNote(){

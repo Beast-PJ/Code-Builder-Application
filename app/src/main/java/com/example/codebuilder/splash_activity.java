@@ -6,6 +6,7 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.codebuilder.User.Login_Activity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -19,7 +20,7 @@ public class splash_activity extends AppCompatActivity {
         new Handler().postDelayed(() -> {
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
             if(currentUser==null){
-                startActivity(new Intent(splash_activity.this,Login_Activity.class));
+                startActivity(new Intent(splash_activity.this, Login_Activity.class));
             }
             else{
                 startActivity(new Intent(splash_activity.this,MainActivity.class));

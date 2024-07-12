@@ -1,4 +1,4 @@
-package com.example.codebuilder;
+package com.example.codebuilder.Dialog;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -13,8 +13,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class Con_Dialog extends AppCompatDialogFragment {
-    private EditText cond;
+import com.example.codebuilder.R;
+
+public class Statement_Dialog extends AppCompatDialogFragment {
+    private EditText state;
     private ExampleDialogListener listener;
     @SuppressLint("MissingInflatedId")
     @NonNull
@@ -22,7 +24,7 @@ public class Con_Dialog extends AppCompatDialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.eif_dialog,null);
+        View view = inflater.inflate(R.layout.statement_dialog_activity,null);
 
         builder.setView(view)
                 .setTitle("condition Statement")
@@ -30,14 +32,14 @@ public class Con_Dialog extends AppCompatDialogFragment {
 
                 })
                 .setPositiveButton("Insert", (dialogInterface, i) -> {
-                    String conditi = cond.getText().toString();
-                    if (conditi.isEmpty()){
-                        cond.setError("Condition can't be empty");
+                    String statement = state.getText().toString();
+                    if (statement.isEmpty()){
+                        state.setError("Condition can't be empty");
                         return;
                     }
-                    listener.applycondition(conditi);
+                    listener.applystatement(statement);
                 });
-        cond = view.findViewById(R.id.condition);
+        state = view.findViewById(R.id.statement);
         return builder.create();
 
     }
@@ -53,6 +55,7 @@ public class Con_Dialog extends AppCompatDialogFragment {
     }
 
     public interface ExampleDialogListener{
-        void applycondition(String condition);
+        void applystatement(String statement);
     }
 }
+

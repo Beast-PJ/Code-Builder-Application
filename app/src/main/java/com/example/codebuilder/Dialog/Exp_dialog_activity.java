@@ -1,4 +1,4 @@
-package com.example.codebuilder;
+package com.example.codebuilder.Dialog;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -17,12 +17,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.example.codebuilder.R;
+
 public class Exp_dialog_activity extends AppCompatDialogFragment {
     EditText oprand1,oprand2,oprand3,expression;
     ToggleButton type;
     Spinner spinner;
     String exp;
-    private com.example.codebuilder.Exp_dialog_activity.ExampleDialogListener listener;
+    private Exp_dialog_activity.ExampleDialogListener listener;
     @SuppressLint("MissingInflatedId")
     @NonNull
     @Override
@@ -113,7 +115,7 @@ public class Exp_dialog_activity extends AppCompatDialogFragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         try {
-            listener =(com.example.codebuilder.Exp_dialog_activity.ExampleDialogListener) context;
+            listener =(Exp_dialog_activity.ExampleDialogListener) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(context +"must implement ExampleDialogListener");
         }

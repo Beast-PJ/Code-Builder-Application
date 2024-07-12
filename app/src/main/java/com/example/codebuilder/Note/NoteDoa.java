@@ -1,4 +1,4 @@
-package com.example.codebuilder;
+package com.example.codebuilder.Note;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

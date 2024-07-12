@@ -1,4 +1,4 @@
-package com.example.codebuilder;
+package com.example.codebuilder.Note;
 
 import android.content.Context;
 import android.os.AsyncTask;
