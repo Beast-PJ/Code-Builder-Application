@@ -2,59 +2,70 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/dialog_background"
+    android:background="@drawable/dialog_light_background"
     android:elevation="10dp"
     android:padding="16dp">
 
-    <Spinner
-        android:id="@+id/datatype"
+    <TextView
+        android:id="@+id/dialog_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="16dp"
+        android:text="Create Variable"
+        android:textColor="#333333"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/datatype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
         android:hint="Datatypes"
         android:padding="10dp"
-        android:background="@drawable/custom_spinner"
-        android:textColor="#ffffff"
+        android:background="@drawable/custom_light_spinner"
+        android:textColor="#4a4a4a"
         android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/varible_names"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_toEndOf="@id/datatype"
-        android:background="@drawable/custom_edittext"
-        android:padding="10dp"
+        android:layout_marginBottom="12dp"
         android:hint="Variable Names"
-        android:hintTextColor="#b0bec5"
-        android:textColor="#ffffff"
-        android:textStyle="bold" />
+        android:animateLayoutChanges="true"
+        android:background="@drawable/custom_light_edittext"
+        android:focusableInTouchMode="true"
+        android:hintTextColor="#757575"
+        android:padding="10dp"
+        android:textColor="#4a4a4a"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/varible_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/varible_names"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/custom_edittext"
+        android:layout_marginBottom="16dp"
+        android:animateLayoutChanges="true"
         android:padding="10dp"
+        android:background="@drawable/custom_light_edittext"
+        android:focusableInTouchMode="true"
         android:hint="Variable Value (Optional)"
-        android:hintTextColor="#b0bec5"
-        android:textColor="#ffffff"
-        android:textStyle="bold" />
+        android:hintTextColor="#757575"
+        android:textColor="#4a4a4a"
+        android:textStyle="bold"/>
 
     <ToggleButton
         android:id="@+id/access_specifer"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/varible_value"
-        android:background="@drawable/custom_toggle"
-        android:textColor="#ffffff"
         android:textOff="Public"
         android:textOn="Private"
+        android:layout_marginEnd="10dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/custom_light_toggle"
+        android:textColor="#4a4a4a"
         android:textStyle="bold" />
 
     <ToggleButton
@@ -63,9 +74,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/access_specifer"
         android:textOff="Single"
-        android:background="@drawable/custom_toggle"
-        android:textColor="#ffffff"
         android:textOn="Array"
+        android:layout_marginEnd="10dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/custom_light_toggle"
+        android:textColor="#4a4a4a"
         android:textStyle="bold" />
 
     <ToggleButton
@@ -73,12 +86,14 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/varible_value"
-        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_toEndOf="@id/access_specifer"
-        android:background="@drawable/custom_toggle"
-        android:textColor="#ffffff"
         android:textOff="Non Static"
         android:textOn="Static"
+        android:layout_marginEnd="10dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/custom_light_toggle"
+        android:textColor="#4a4a4a"
         android:textStyle="bold" />
 
     <ToggleButton
@@ -86,12 +101,38 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/static_status"
-        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_toEndOf="@id/array_toggle"
         android:textOff="Non Constant"
-        android:background="@drawable/custom_toggle"
-        android:textColor="#ffffff"
         android:textOn="Constant"
+        android:layout_marginEnd="10dp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/custom_light_toggle"
+        android:textColor="#4a4a4a"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Constant"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:drawableStart="@drawable/ic_submit"
+        android:drawablePadding="8dp"
+        android:padding="12dp"
+        android:text="Submit"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_submit"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:padding="12dp"
+        android:text="Cancel"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>
