@@ -76,11 +76,6 @@ Follow these steps to install **Code Builder** and start your coding journey:
 
 ---
 
-## 📜 **License**
-
-**Code Builder** is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
----
 
 ## 📬 **Contact Us**
 
